@@ -1,0 +1,245 @@
+export type Comment = {
+  id: string;
+  videoId: string;
+  author: string;
+  avatar: string;
+  text: string;
+  likes: number;
+  timeAgo: string;
+  replies?: Comment[];
+  pinned?: boolean;
+};
+
+export const COMMENTS: Comment[] = [
+  {
+    id: "c1",
+    videoId: "1",
+    author: "Alex Rivera",
+    avatar: "AR",
+    text: "This is genuinely the most detailed setup tour I've ever seen. The cable management section alone was worth watching the whole thing.",
+    likes: 4200,
+    timeAgo: "2 days ago",
+    pinned: true,
+    replies: [
+      {
+        id: "c1r1",
+        videoId: "1",
+        author: "TechGamer Pro",
+        avatar: "TG",
+        text: "Thanks so much! Cable management is something I spent weeks perfecting. Glad it showed!",
+        likes: 890,
+        timeAgo: "2 days ago",
+      },
+      {
+        id: "c1r2",
+        videoId: "1",
+        author: "Sam K.",
+        avatar: "SK",
+        text: "Agreed. I rewatched that part three times to get ideas for my own desk.",
+        likes: 312,
+        timeAgo: "1 day ago",
+      },
+    ],
+  },
+  {
+    id: "c2",
+    videoId: "1",
+    author: "Jordan Flores",
+    avatar: "JF",
+    text: "The budget section is so underrated. Most channels only show $5000+ setups. This one actually helps regular people.",
+    likes: 2100,
+    timeAgo: "3 days ago",
+    replies: [],
+  },
+  {
+    id: "c3",
+    videoId: "1",
+    author: "Mia Chen",
+    avatar: "MC",
+    text: "What monitor arm are you using? I can't find it anywhere online.",
+    likes: 430,
+    timeAgo: "1 day ago",
+    replies: [
+      {
+        id: "c3r1",
+        videoId: "1",
+        author: "TechGamer Pro",
+        avatar: "TG",
+        text: "It's linked in the description! It's the ErgoTech Freedom arm.",
+        likes: 210,
+        timeAgo: "1 day ago",
+      },
+    ],
+  },
+  {
+    id: "c4",
+    videoId: "1",
+    author: "DevNick",
+    avatar: "DN",
+    text: "Been watching your channel for 3 years. This is your best video yet. Massive improvement in production quality.",
+    likes: 1800,
+    timeAgo: "3 days ago",
+    replies: [],
+  },
+  {
+    id: "c5",
+    videoId: "1",
+    author: "Priya S.",
+    avatar: "PS",
+    text: "I went from zero to a full gaming setup after watching your videos. My parents think I've lost my mind but my KDA says otherwise.",
+    likes: 6700,
+    timeAgo: "2 days ago",
+    replies: [],
+  },
+  {
+    id: "c6",
+    videoId: "2",
+    author: "Giulia Rossi",
+    avatar: "GR",
+    text: "I'm Italian and this is actually better than my grandmother's recipe. Please don't tell her I said that.",
+    likes: 9100,
+    timeAgo: "6 days ago",
+    pinned: true,
+    replies: [
+      {
+        id: "c6r1",
+        videoId: "2",
+        author: "Chef Marco Kitchen",
+        avatar: "CM",
+        text: "Your secret is safe with me! Although grandmothers always have that secret ingredient.",
+        likes: 3200,
+        timeAgo: "6 days ago",
+      },
+    ],
+  },
+  {
+    id: "c7",
+    videoId: "2",
+    author: "Tom Bradley",
+    avatar: "TB",
+    text: "The tip about never using cream is such a game changer. I've been doing it wrong for 10 years.",
+    likes: 5400,
+    timeAgo: "1 week ago",
+    replies: [],
+  },
+  {
+    id: "c8",
+    videoId: "2",
+    author: "Lena Muller",
+    avatar: "LM",
+    text: "Made this last night for a dinner party. Got a standing ovation. This recipe changed my life.",
+    likes: 7800,
+    timeAgo: "5 days ago",
+    replies: [
+      {
+        id: "c8r1",
+        videoId: "2",
+        author: "Tom Bradley",
+        avatar: "TB",
+        text: "A standing ovation for pasta! That's the dream.",
+        likes: 420,
+        timeAgo: "5 days ago",
+      },
+    ],
+  },
+  {
+    id: "c9",
+    videoId: "2",
+    author: "Marcus J.",
+    avatar: "MJ",
+    text: "0:45 - that pasta water explanation finally made everything click. Why does nobody talk about this enough?",
+    likes: 2300,
+    timeAgo: "4 days ago",
+    replies: [],
+  },
+  {
+    id: "c10",
+    videoId: "3",
+    author: "Zoe Park",
+    avatar: "ZP",
+    text: "The smart home section is incredible. I ordered three of those gadgets immediately after watching this.",
+    likes: 1400,
+    timeAgo: "4 days ago",
+    pinned: true,
+    replies: [],
+  },
+  {
+    id: "c11",
+    videoId: "3",
+    author: "Raj Patel",
+    avatar: "RP",
+    text: "Been following this channel for years. The production quality keeps getting better. Keep it up!",
+    likes: 870,
+    timeAgo: "3 days ago",
+    replies: [],
+  },
+  {
+    id: "c12",
+    videoId: "4",
+    author: "Chris Walker",
+    avatar: "CW",
+    text: "Day 1 complete. My legs feel like jelly but I'm committed to the full 30 days.",
+    likes: 3200,
+    timeAgo: "2 weeks ago",
+    pinned: true,
+    replies: [
+      {
+        id: "c12r1",
+        videoId: "4",
+        author: "FitLife Daily",
+        avatar: "FL",
+        text: "That's the spirit! The first 3 days are the hardest. Push through and you'll thank yourself.",
+        likes: 1100,
+        timeAgo: "2 weeks ago",
+      },
+    ],
+  },
+  {
+    id: "c13",
+    videoId: "4",
+    author: "Sophie M.",
+    avatar: "SM",
+    text: "Update for anyone curious: I finished the full 30 days. Lost 12 pounds and feel amazing. Do it.",
+    likes: 14200,
+    timeAgo: "1 week ago",
+    replies: [],
+  },
+];
+
+export function getCommentsForVideo(videoId: string): Comment[] {
+  const specific = COMMENTS.filter((c) => c.videoId === videoId);
+  if (specific.length > 0) return specific;
+  return [
+    {
+      id: `gen-${videoId}-1`,
+      videoId,
+      author: "Riley Thompson",
+      avatar: "RT",
+      text: "This is exactly the kind of content I subscribed for. Absolutely brilliant video.",
+      likes: 2100,
+      timeAgo: "3 days ago",
+      pinned: true,
+      replies: [],
+    },
+    {
+      id: `gen-${videoId}-2`,
+      videoId,
+      author: "Casey Morgan",
+      avatar: "CM",
+      text: "Shared this with my entire friend group. Everyone needs to see this.",
+      likes: 980,
+      timeAgo: "4 days ago",
+      replies: [],
+    },
+    {
+      id: `gen-${videoId}-3`,
+      videoId,
+      author: "Jamie Lee",
+      avatar: "JL",
+      text: "The editing in this video is top notch. How long did this take to make?",
+      likes: 540,
+      timeAgo: "2 days ago",
+      replies: [],
+    },
+  ];
+}
